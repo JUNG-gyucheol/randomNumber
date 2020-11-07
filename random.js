@@ -15,16 +15,25 @@ regiBtn.addEventListener("click", () => {
   i = 1;
   const limit = document.getElementById("limitNumber");
   num = Array(Number(limit.value));
-  createNumber(num);
-  console.log(num);
-  alert("등록완료");
+  if (num.length === 0) {
+    alert("숫자를 입력해주세요");
+  } else {
+    createNumber(num);
+    console.log(num);
+    alert("등록완료");
+  }
 });
 // 추첨 수를 설정합니다.
 pBtn.addEventListener("click", () => {
+  people = Number(document.getElementById("limitPeople").value);
+  if (people === 0 || people > 8) {
+    people = 0;
+    alert("추첨수를 입력해주세요(최대 8까지 입력가능)");
+    return;
+  }
   if (num.length === 0) {
     alert("숫자부터 입력해주세요.");
   } else {
-    people = Number(document.getElementById("limitPeople").value);
     if (num.length >= people) {
       re.style.width = 35 * people + "px";
       alert("등록완료");
@@ -69,7 +78,7 @@ function callback() {
     setTimeout(() => {
       document.querySelector(".number_wrap").style.display = "none";
     }, 3000);
-  } else if (arr.length === 0) {
+  } else if (people === 0) {
     alert("숫자와 추첨 수를 입력해주세요!!");
   }
 
