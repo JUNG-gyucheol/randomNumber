@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href="random.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="inline">
+            <div>최대 숫자를 입력해주세요.</div>
+            <input type="number" id='limitNumber' placeholder="숫자입력">
+            <input type="button" value='등록' id="regiBtn">
+        </div>
+        <div class="inline">
+            <div>추첨 수를 입력해주세요.</div>
+            <input type="number" id='limitPeople' placeholder="추첨수입력">
+            <input type="button" id='peopleBtn' value="등록">
+        </div>
+    </div>
+    <div class="container">
+        <div class="main">
+            추첨 뽑기
+        </div>
+        <div id=result></div>
+        <div class=number_wrap>
+            <!-- <img src="image/Spin-1s-200px.gif" /> -->
+            <!-- <div id="number"></div> -->
+            추첨중!
+        </div>
+        <button id="btn">추첨</button>
+    </div>
+    <script src="random.js"></script>
+</body>
+
+</html>
