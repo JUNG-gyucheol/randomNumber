@@ -55,7 +55,7 @@ body {
   height: 40px;
   width: 280px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 5px;
   text-align: center;
   justify-content: center;
 }
@@ -242,9 +242,17 @@ body {
     left: 245px;
   }
 }
-#result :nth-child(9) {
+#result2 {
+  position: relative;
+  height: 40px;
+  width: 280px;
+  margin: auto;
+  margin-top: 5x;
+  text-align: center;
+  justify-content: center;
+}
+#result2 :nth-child(1) {
   position: absolute;
-  left: 240px;
   border: 1px solid #a5ecd7;
   background-color: #a5ecd7;
   border-radius: 50%;
@@ -262,7 +270,168 @@ body {
     left: 100%;
   }
   100% {
-    left: 0%;
+    left: 0;
+  }
+}
+#result2 :nth-child(2) {
+  position: absolute;
+  border: 1px solid #a5ecd7;
+  background-color: #a5ecd7;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  left: 35px;
+  font-weight: bold;
+  line-height: 30px;
+  animation-name: num2;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+}
+@-webkit-keyframes num2 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 35px;
+  }
+}
+#result2 :nth-child(3) {
+  position: absolute;
+  border: 1px solid #a5ecd7;
+  background-color: #a5ecd7;
+  border-radius: 50%;
+  left: 70px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  animation-name: num3;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+}
+@-webkit-keyframes num3 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 70px;
+  }
+}
+#result2 :nth-child(4) {
+  position: absolute;
+  border: 1px solid #a5ecd7;
+  background-color: #a5ecd7;
+  border-radius: 50%;
+  left: 105px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  animation-name: num4;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+}
+@-webkit-keyframes num4 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 105px;
+  }
+}
+#result2 :nth-child(5) {
+  position: absolute;
+  border: 1px solid #a5ecd7;
+  background-color: #a5ecd7;
+  border-radius: 50%;
+  left: 140px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  animation-name: num5;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+}
+@-webkit-keyframes num5 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 140px;
+  }
+}
+#result2 :nth-child(6) {
+  position: absolute;
+  border: 1px solid #a5ecd7;
+  background-color: #a5ecd7;
+  border-radius: 50%;
+  left: 175px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  animation-name: num6;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+}
+@-webkit-keyframes num6 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 175px;
+  }
+}
+#result2 :nth-child(7) {
+  position: absolute;
+  border: 1px solid #a5ecd7;
+  background-color: #a5ecd7;
+  border-radius: 50%;
+  left: 210px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  animation-name: num7;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+}
+@-webkit-keyframes num7 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 210px;
+  }
+}
+#result2 :nth-child(8) {
+  position: absolute;
+  border: 1px solid #a5ecd7;
+  background-color: #a5ecd7;
+  border-radius: 50%;
+  left: 245px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  animation-name: num8;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+}
+@-webkit-keyframes num8 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 245px;
   }
 }
 /* .resultNumber {

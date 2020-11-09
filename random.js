@@ -1,6 +1,7 @@
 const btn = document.getElementById("btn"); //추첨버튼
-const numEnter = document.getElementById("number");
+// const numEnter = document.getElementById("number");
 const re = document.getElementById("result"); //추첨 결과 태그 요소선택
+const re2 = document.getElementById("result2"); //추첨 결과 태그 요소선택
 const regiBtn = document.getElementById("regiBtn"); //1~n개 까지의 번호 설정
 const pBtn = document.getElementById("peopleBtn"); //뽑을 추첨번호 개수등록버튼
 let arr = []; // 추첨버튼 클릭 시 배열에 담아서 출력
@@ -26,16 +27,21 @@ regiBtn.addEventListener("click", () => {
 // 추첨 수를 설정합니다.
 pBtn.addEventListener("click", () => {
   people = Number(document.getElementById("limitPeople").value);
-  if (people === 0 || people > 8) {
+  if (people === 0 || people > 16) {
     people = 0;
-    alert("추첨수를 입력해주세요(최대 8까지 입력가능)");
+    alert("추첨수를 입력해주세요(최대 16까지 입력가능)");
     return;
   }
   if (num.length === 0) {
     alert("숫자부터 입력해주세요.");
   } else {
     if (num.length >= people) {
-      re.style.width = 35 * people + "px";
+      if (people <= 8) {
+        re.style.width = 35 * people + "px";
+      } else {
+        re.style.width = 35 * 8 + "px";
+        re2.style.width = 35 * Math.floor(people / 2) + "px";
+      }
       alert("등록완료");
     } else {
       alert("추첨수가 최대숫자보다 많습니다.");
@@ -50,10 +56,6 @@ const createNumber = (num) => {
     // number.classList.add("num", num[idx]);
     // number.textContent = num[idx];
   });
-  // for (let j = 1; j < num.length; j++) {
-  //   let size = document.getElementsByClassName("num")[j];
-  //   size.style.display = "none";
-  // }
 };
 
 //추첨 버튼 클릭할 때마다 추첨번호 하나씩 출력됩니다.
@@ -64,12 +66,18 @@ function callback() {
     let result = Math.floor(Math.random() * num.length) + 1;
     if (arr.includes(result)) {
       time(); //똑같은 랜덤값이 나오면 다시 함수 호출하여 숫자를 비교합니다.
-    } else {
+    } else if (arr.length < 8) {
       arr.push(result);
       const resultTag = document.createElement("div");
       re.append(resultTag);
       resultTag.classList.add("resultNumber");
       resultTag.textContent = arr[k++];
+    } else if (arr.length <= 16) {
+      arr.push(result);
+      const resultTag2 = document.createElement("div");
+      re2.append(resultTag2);
+      resultTag2.classList.add("resultNumber");
+      resultTag2.textContent = arr[k++];
     }
   }
   if (arr.length < people) {
